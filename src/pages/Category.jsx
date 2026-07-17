@@ -10,10 +10,9 @@ function Category() {
 
     return (
         <div>
-            
+            <h2>{category} Courses</h2>
             {filteredCourses.length > 0 ? filteredCourses.map( course => (
-                <>
-                <span>{course.category} Courses</span>
+                
                 <Link
                     to={`/courses/${course.slug}`}
                     className="card"
@@ -23,7 +22,6 @@ function Category() {
                     <h2 className="course-title">{course.title}</h2>
                     <span className="duration">{course.duration}</span>
                 </Link>
-                </>
             )) : 
                 <div>No Courses Found!</div>
             }
