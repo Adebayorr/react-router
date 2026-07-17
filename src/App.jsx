@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router'
 import HomePage from './pages/HomePage'
 import Category from './pages/Category'
-import CourseDetails from './pages/CourseDetail'
+import CourseDetails from './pages/CourseDetails'
 import NotFound from './pages/NotFound'
 import { Navbar } from './components/Navbar'
 import './App.css'
