@@ -1,5 +1,6 @@
 import { useParams, useNavigate} from "react-router"
 import { courses } from  "../data/courses"
+import './CourseDetails.css'
 
 function CourseDetails () {
     const { slug } = useParams()
@@ -8,7 +9,7 @@ function CourseDetails () {
     const navigate = useNavigate()
     return (
         <>
-            <button onClick={() => navigate(-1)}>Go back</button>
+            <button className="go-back-btn" onClick={() => navigate(-1)}>Go back</button>
             {course === undefined ? 
                 <h3>Course Not Found</h3> : 
                 <div>
