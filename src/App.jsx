@@ -3,17 +3,22 @@ import HomePage from './pages/HomePage'
 import Category from './pages/Category'
 import CourseDetails from './pages/CourseDetail'
 import NotFound from './pages/NotFound'
+import { Navbar } from './components/Navbar'
 import './App.css'
+
 
 function App() {
 
   return (
-    <Routes>
-      <Route index element={<HomePage />}></Route>
-      <Route path='/Category' element={<Category />}></Route>
-      <Route path='/CourseDetails' element={<CourseDetails />}></Route>
-      <Route path='/NotFound' element={<NotFound />}></Route>
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route index element={<HomePage />}></Route>
+        <Route path='/category/:category' element={<Category />}></Route>
+        <Route path='/courses/:slug' element={<CourseDetails />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
+      </Routes>
+    </>
   )
 }
 
