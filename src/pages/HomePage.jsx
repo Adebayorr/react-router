@@ -1,5 +1,6 @@
 import { Link } from "react-router"
 import { courses } from "../data/courses"
+import "./HomePage.css"
 
 function Homepage() {
 
