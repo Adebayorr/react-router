@@ -14,7 +14,11 @@ function CourseDetails () {
                 <div>
                     <h3>{course.title}</h3>
                     <span className="duration">{course.duration}</span>
-                    
+                    <p className="desc">{course.description}</p>
+                    <h4 className="topics-title">Topics Covered</h4>
+                    <div className="topics">
+                        {course.topics.map((topic) => <div><span>✔</span> {topic}</div>)}
+                    </div>
                 </div>
             }
         </>
